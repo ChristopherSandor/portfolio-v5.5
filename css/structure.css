@@ -24,8 +24,8 @@ text-align: center;
   height: max(41.5vw, 500px);
 }
 .border-right-img{
-  width: max(35vw, 230px);
-margin-top: max(30vh, 200px);
+width: max(35vw, 230px);
+z-index: 5;
 }
 .homeIcon{
   height: max(8.25vw, 75px);
