@@ -1,3 +1,5 @@
+/* https://www.shapedivider.app/ */
+
 .row{
   --bs-gutter-x: 0rem!important;
 }
@@ -21,23 +23,24 @@ text-align: center;
   height: 10vw;
 }
 .openingHome{
-  height: max(41.5vw, 500px);
+  height: max(44vw, 650px);
 }
 .border-right-img{
 width: max(35vw, 230px);
 z-index: 5;
 }
 .homeIcon{
-  height: max(8.25vw, 75px);
-  width: max(8.25vw, 75px);
+  height: max(8vw, 75px);
+  width: max(8vw, 75px);
   display: block;
   margin: auto; 
   padding: 10px;
     transition: 0.3s;
+   
 }
 .homeIcon:hover{
-  height: max(9vw, 80px);
-  width: max(9vw, 80px);
+  height: max(6.7vw, 58px);
+  width: max(6.7vw, 58px);
   padding: 5px;
 }
 
@@ -51,6 +54,7 @@ z-index: 5;
 .iconWrap{
   padding: 10px;
 }
+
 .titleWrappers{
   float: right;
 }

@@ -5,6 +5,12 @@ $offWhite2: #c9c9c9;
 $grey: grey;
 // Variables END
 
+@font-face {
+    font-family: titleFont;
+    src: url(../font/TT\ Ramillas\ Initials\ Trial\ Bold.ttf);
+  }
+
+
 .openingBackGround{
     background-color: $offWhite;
 }
@@ -19,10 +25,11 @@ $grey: grey;
 }
 .navbarButton{
     color: $offWhite;
-    font-size: max(3.2vw, 55px);
+    font-size: max(5vw, 74px);
     font-family: "century-gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding-left: 25px;
 }
 .navbar-dark{
     background-color: $offBlack!important;
@@ -135,21 +142,27 @@ height: max(65%, 130px);
 // SECOND NAVBAR WITH OPTIONS START
 .secondNav{
 background-color: #111111;
-height: max(2.5vw, 50px);
+height: max(3vw, 60px);
 }
 .secondNavTxt{
 color: $offWhite;
-font-family: articulat-cf, sans-serif;
-font-style: normal;
+// font-family: articulat-cf, sans-serif;
+font-family: titleFont;
+font-style: italic;
 font-weight: 100;
-font-size: max(1.5vw, 35px);
-padding-left: max(3vw, 30px);
-padding-right: max(3vw, 30px);
+font-size: max(1.75vw, 33px);
+padding-left: 30px;
+padding-right: 30px;
+transition: 0.5s;
+}
+.secondNavInside{
+    padding-right: min(4.5vw, 140px);
 }
 .secondNavTxt:hover{
 text-decoration: none;
-color: #D72539;;
+color: #D72539;
 }
+
 // END OF SECOND NAVBAR WITH OPTIONS START
 
 
@@ -166,11 +179,9 @@ font-weight: 300;
 font-family: 'Playfair Display', serif;
 font-style: italic;
 color: #D72539;
-font-size: max(7vw, 37px);
+font-size: max(7.5vw, 40px);
+z-index: 4;
 text-decoration: none!important;
-}
-.openingHome{
- height: max(50vh, 800px);
 }
 
 // END OF MAIN SCREEN
@@ -179,8 +190,8 @@ text-decoration: none!important;
 
 // Home Screen Icons START
 .homePhotos{
-height: max(58vw, 375px);
 background-color: #ffc823;
+--bs-gutter-x: 0rem!important;
 }
 .boxContainer{
     background-color: #111111;
@@ -189,12 +200,13 @@ background-color: #ffc823;
 .iconsHeadingText{
 color: white;
 text-align: center;
-font-family: acier-bat-outline, sans-serif;
+font-family: titleFont;
 font-style: normal;
 font-weight: 400;
 font-size: max(7vw, 40px);
 bottom: 0;
 }
+
 .bottomText{
 text-align: center; 
 color: $offWhite2;
@@ -202,8 +214,11 @@ font-size: max(1vw, 20px);
 font-family: depot-new-web;
 font-weight: 100;
 font-style: normal;
-transition: 1s;
+transition: 0.3s;
 text-decoration: none;
+}
+.bottomText:hover{
+    font-size: max(1.1vw, 23px);
 }
 
 .bottomTextKeepUp{
@@ -216,17 +231,18 @@ text-decoration: none;
 
 // JOB EXP. START
 .workExpHeadingText{
-color: black;
+color: $offWhite;
 text-align: center;
-font-family: acier-bat-solid, sans-serif;
-font-style: normal;
+font-family: 'Playfair Display', serif;
+font-style: italic;
 font-weight: 700;
 font-size: max(7vw, 35px);
 bottom: 0;
 }
 .workExpBody{
-height: max(52vw, 800px);
-background-color: #f5f5f5;
+height: max(44vw, 600px);
+background-color: #D72539;
+--bs-gutter-x: 0rem;
 }
 .workNameTitle{
 font-family: articulat-cf, sans-serif;
@@ -245,18 +261,14 @@ float: right;
 .workbodyText{
     font-family: depot-new-web, sans-serif; 
     font-weight: 400; 
-color: black;
+color: $offWhite;
 opacity: 80%;
-font-size: max(1.5vw, 19px);
+font-size: max(1.6vw, 22px);
 }
 .companyLogo1{
-    height: max(7vw, 30px);
-    width: max(16vw, 75px);
+    height: max(8.5vw, 100px);
+    width: max(19vw, 240px);
     position: absolute;
-}
-.vertLine{
-background-color: $offBlack;
-border-radius: 5px;
 }
 
 
@@ -266,23 +278,27 @@ border-radius: 5px;
 // Contact Information
 
 .contactTitle{
-font-size: max(3vw, 25px);
-font-family: acier-bat-solid, sans-serif;
-color: $offBlack
+font-size: max(4.25vw, 40px);
+// font-family: acier-bat-solid, sans-serif;
+font-family: 'Playfair Display', serif;
+color: #D72539;
+font-style: italic;
 }
 .emailTitle{
-    font-size: max(2vw, 18px);
-    font-family: articulat-cf, sans-serif;
-    color: $offBlack
+    font-size: max(2vw, 25px);
+    font-family: titlefont;
+    color: #111111;
 }
 .emailAddress{
-    font-size: max(1.5vw, 16px);
+    font-size: max(1.7vw, 23px);
     font-family: depot-new-web; 
-    color: $offBlack
+    color: $offWhite;
+    transition: 0.3s;
 }
 .emailAddress:hover{
-    color: $offBlack;
+    color: #D72539;
     text-decoration: underline;
+
 }
 
 a:hover{
@@ -299,6 +315,10 @@ a:link{
     width: max(2vw, 30px);
     transition: 0.3s;
 }
+.contactSocial:hover{
+    height: max(2.2vw, 35px);
+    width: max(2.2vw, 35px);
+}
 
 #leftsocial{
     float: right;
@@ -308,5 +328,148 @@ a:link{
 }
 
 .contactBody{
-    background-color: $offWhite2;
+    background-color: #FFC823;;
+    --bs-gutter-x: 0rem;
+}
+.dropdownBodySides{
+    background: rgb(255,200,35);
+}
+
+#pageOverlay{
+position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111; /* Black background with opacity */
+  z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.customViewSmall{
+    height: 700px;
+}
+.customViewSmallHeader{
+    color:#ffc823;
+    font-family: titleFont;
+    font-size: 120px;
+}
+.customViewSmallText{
+    color: $offWhite;
+    font-family: 'Playfair Display', serif;
+}
+
+// 
+.custom-shape-divider-top-1678573172 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1678573172 svg {
+    position: relative;
+    display: block;
+    width: calc(118% + 1.3px);
+    height: 153px;
+}
+
+.custom-shape-divider-top-1678573172 .shape-fill {
+    fill: #FFC823;
+}
+.extraCurve{
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+// 
+.custom-shape-divider-top-1678574792 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1678574792 svg {
+    position: relative;
+    display: block;
+    width: calc(205% + 1.3px);
+    height: 341px;
+}
+
+.custom-shape-divider-top-1678574792 .shape-fill {
+    fill: #111111;
+}
+
+// 
+.custom-shape-divider-top-1678643507 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1678643507 svg {
+    position: relative;
+    display: block;
+    width: calc(107% + 1.3px);
+    height: 151px;
+}
+
+.custom-shape-divider-top-1678643507 .shape-fill {
+    fill: #111111;
+}
+.borderBackgroundBot{
+    background-color: #FFC823;;
+}
+
+//
+.custom-shape-divider-bottom-1678646152 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678646152 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 88px;
+}
+
+.custom-shape-divider-bottom-1678646152 .shape-fill {
+    fill: #111111;
+}
+.wrapYellow{
+    background-color: #FFC823;
+}
+
+//
+.custom-shape-divider-bottom-1678654592 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678654592 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 122px;
+}
+
+.custom-shape-divider-bottom-1678654592 .shape-fill {
+    fill: #111111;
 }

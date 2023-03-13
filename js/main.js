@@ -41,6 +41,14 @@ var TxtType = function(el, toRotate, period) {
 
     window.onload = function() {
         var elements = document.getElementsByClassName('typewrite');
+
+        if (window.matchMedia("(min-width: 880px)").matches) {
+            document.getElementById("pageOverlay").style.display = "none";
+        } else {
+            document.getElementById("pageOverlay").style.display = "block";
+        }
+
+
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
             var period = elements[i].getAttribute('data-period');
@@ -55,7 +63,13 @@ var TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
 
-    // MODAL
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus');
-    });
+  
+
+    // Screen Checker
+    window.addEventListener("resize", function() {
+        if (window.matchMedia("(min-width: 880px)").matches) {
+            document.getElementById("pageOverlay").style.display = "none";
+        } else {
+            document.getElementById("pageOverlay").style.display = "block";
+        }
+      })
