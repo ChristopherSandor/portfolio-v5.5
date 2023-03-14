@@ -6,20 +6,24 @@ $grey: grey;
 // Variables END
 
 .qualBody{
-    height: max(250vw, 1700px);
+    height: max(340vw, 2700px);
+    background-color: #111111;
+}
+.container-fluid{
+    --bs-gutter-x: 0rem;
 }
 .cardBody{
     height: max(25vw, 175px);
-    background-color: $offBlack;
+    background-color: $offWhite;
     border-radius: 15px;
 }
 .cardHeaderTxtWrapper{
     height: max(10vw, 50px);
 }
 .cardHeaderTxt{
-    font-family: acier-bat-solid, sans-serif;
+    font-family: "century-gothic", sans-serif;
     font-size: max(4vw, 35px);
-    color: $offWhite2;
+    color: #D72539;
     padding-top: 1vw;
 }
 .cardBodyTxtWrapper{
@@ -28,7 +32,7 @@ $grey: grey;
 .cardBodyTxt{
 font-family: depot-new-web, sans-serif; 
 font-size: max(1.5vw, 13px);
-color: $offWhite2;
+color: #111111;
 padding-right: 1vw;
 }
 .cardIcon{
@@ -51,11 +55,34 @@ padding-right: 1vw;
 
 .worksHeader{
     font-weight: 300;
- font-family: acier-bat-gris, sans-serif;
-   color: #111111;
-   font-size: 5vw;
+    font-family: 'Playfair Display', serif;
+   color: #D72539;
+   font-size: 6.25vw;
+   font-style: italic;
  }
  .worksHeaderWrapper{
      text-align: center;
    font-style: normal;
  }
+
+ //
+
+ .custom-shape-divider-bottom-1678804932 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678804932 svg {
+    position: relative;
+    display: block;
+    width: calc(101% + 1.3px);
+    height: 160px;
+}
+
+.custom-shape-divider-bottom-1678804932 .shape-fill {
+    fill: #111111;
+}
