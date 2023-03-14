@@ -1,5 +1,11 @@
+@font-face {
+  font-family: titleFont;
+  src: url(../font/TT\ Ramillas\ Initials\ Trial\ Bold.ttf);
+}
+
+
 .bigBody{
-  height: max(100vw, 1100px);;
+  height: max(82vw, 1000px);;
   --bs-gutter-x: 0rem!important;
 }
 .headerAbout{
@@ -8,10 +14,11 @@
 }
 .headerAboutTxt{
   font-weight: 300;
-font-family: acier-bat-gris, sans-serif;
+font-family: titleFont;
   color: #f5f5f5;
   font-size: max(6.5vw, 55px);
   text-align: center;
+  font-style: italic;
 }
 #headerRightAboutTxt{
   color: #111111;
@@ -25,7 +32,7 @@ font-family: acier-bat-gris, sans-serif;
   border-radius: 7px;
 }
 .aboutTxt{
-font-size: max(2vw, 16px);
+font-size: max(2vw, 24px);
 font-family: depot-new-web, sans-serif; 
 font-style: normal;
 font-weight: 300;
@@ -33,12 +40,30 @@ color: #d4d4d4;
 }
 .aboutBody{
   background-color: rgba(17, 17, 17, 1);
-  border-radius: 12px;
 }
 .aboutBodyWrapper{
-  height: max(50vw, 650px);
+  height: max(50vw, 700px);
   border-color: #f5f5f5;
 }
 .bottomIMGWrapper{
   height: max(30vw, 300px);
+}
+
+.custom-shape-divider-top-1678756644 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1678756644 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 151px;
+}
+
+.custom-shape-divider-top-1678756644 .shape-fill {
+  fill: #111111;
 }
